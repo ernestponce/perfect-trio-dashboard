@@ -4,7 +4,7 @@ import './App.css';
 // Import images directly from the assets folder
 import princeImg from './assets/princeprofile.jpg';
 import alfredImg from './assets/redprofile.jpg';
-import ernestImg from './assets/ernprofile.jpg';
+import ernestImg from './assets/ernprofile.JPG';
 
 // --- Background Binary Rain Component ---
 const BinaryRain = () => {
