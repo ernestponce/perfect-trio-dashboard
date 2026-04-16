@@ -207,9 +207,63 @@ body { background-color: var(--bg-color); color: var(--text-main); overflow-x: h
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 240, 255, 0.2);
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-  .glitch-title-pro { font-size: 2.8rem; }
-  .pro-subtitle { font-size: 0.8rem; }
-  .profiles-container { gap: 2rem; }
+/* --- Responsive & Mobile Adjustments --- */
+
+/* For Tablets and Small Laptops */
+@media (max-width: 1050px) {
+  .profiles-container { 
+    flex-wrap: wrap; /* Allow wrapping on medium screens */
+    gap: 2rem; 
+  }
+  .glitch-title-pro { font-size: 3rem; }
+}
+
+/* For Mobile Phones (The main fix for your screenshot) */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .content-wrapper {
+    padding: 2rem 0;
+  }
+
+  .dashboard-header {
+    margin-bottom: 3rem;
+  }
+
+  .glitch-title-pro { 
+    font-size: 2.2rem; /* Shrink title to fit mobile screens */
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+  
+  .pro-subtitle { 
+    font-size: 0.75rem; 
+    padding: 0 1rem;
+  }
+
+  .profiles-container { 
+    flex-direction: column; /* Stack the cards vertically on phones */
+    align-items: center; 
+    gap: 2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 4rem;
+  }
+
+  .pro-card {
+    width: 100%; /* Allow card to shrink if the phone is super narrow */
+    max-width: 320px; /* Keep it from getting too big */
+    padding: 2rem 1.5rem;
+  }
+
+  /* Make the button fit better on small screens */
+  .btn-glow-wrap {
+    padding: 1rem 1.5rem;
+  }
+  
+  .btn-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
 }
